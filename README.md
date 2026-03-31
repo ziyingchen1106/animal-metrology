@@ -1,4 +1,4 @@
-# Animal Metrology with Image Segmentation
+# Animal Metrology
 
 本專案旨在將**圖像分割（Image Segmentation）模型**的輸出，應用於實際的**測量學（Metrology）任務**。
 
@@ -82,15 +82,16 @@ animal-metrology/
 ```bash
 cd animal-metrology
 ```
+<br>
 
 2. 設定環境變數
 
-請先複製`.env.example`，複製後檔名為`.env`：
+複製`.env.example`，複製成檔名為`.env`的檔案：
 ```bash
 cp .env.example .env
 ```
 
-接著根據需求修改`.env`內的環境變數設定：
+根據需求修改`.env`內的環境變數設定，可使用機器上支援的任何編輯器，以vim與nano為例：
 - vim:
 ```bash
 vim .env
@@ -100,6 +101,7 @@ vim .env
 ```bash
 nano .env
 ```
+<br>
 
 3. 啟動服務:
 ```bash
@@ -115,7 +117,7 @@ docker exec animal-metrology python3 download_dataset.py
 ```
 
 下載後的dataset存放在`data/coco/`資料夾。
-
+<br>
 
 2. 篩選符合條件的圖片（≥2 隻動物的圖片）並匯出結果
 
@@ -124,7 +126,7 @@ docker exec animal-metrology python3 filter_data.py
 ```
 
 篩選後的圖片存放在`data/output/selected_images/`資料夾。
-
+<br>
 
 3. 執行模型推論 (動物實體與眼睛位置偵測、眼睛距離計算) 並匯出結果
 
