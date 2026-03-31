@@ -81,8 +81,7 @@ animal-metrology/
 1. 切換至`animal-metrology`資料夾:
 ```bash
 cd animal-metrology
-```
-<br>
+```  
 
 2. 設定環境變數
 
@@ -100,13 +99,12 @@ vim .env
 - nano:
 ```bash
 nano .env
-```
-<br>
+```  
 
 3. 啟動服務:
 ```bash
 docker compose up -d
-```
+```  
 
 ### 二、開始使用
 
@@ -116,8 +114,7 @@ docker compose up -d
 docker exec animal-metrology python3 download_dataset.py
 ```
 
-下載後的dataset存放在`data/coco/`資料夾。
-<br>
+下載後的dataset存放在`data/coco/`資料夾。  
 
 
 2. 篩選符合條件的圖片（≥2 隻動物的圖片）並匯出結果
@@ -126,8 +123,7 @@ docker exec animal-metrology python3 download_dataset.py
 docker exec animal-metrology python3 filter_data.py
 ```
 
-篩選後的圖片存放在`data/output/selected_images/`資料夾。
-<br>
+篩選後的圖片存放在`data/output/selected_images/`資料夾。  
 
 
 3. 執行模型推論 (動物實體與眼睛位置偵測、眼睛距離計算) 並匯出結果
@@ -142,7 +138,7 @@ docker exec animal-metrology python3 predict.py
     - 每隻動物的雙眼距離CSV檔案（格式: <圖片ID>_animals.csv）
     - 任意兩隻動物的右眼之間距離CSV檔案（格式: <圖片ID>_inter_distance.csv）
 
-距離計算結果CSV範例檔存放在`data/output/sample/`資料夾。
+距離計算結果CSV範例檔存放在`data/output/sample/`資料夾。  
 
 
 ### 三、關閉服務
