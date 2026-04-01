@@ -5,7 +5,7 @@ services:
     build:
         context: ./build/
         dockerfile: dockerfile
-    image: animal-metrology:cuda-12.2.0
+    image: animal-metrology:py3.10-cuda12.1
     deploy:
       resources:
         reservations:
